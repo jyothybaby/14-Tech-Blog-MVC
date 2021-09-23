@@ -22,14 +22,10 @@
     <a href="/login">Login</a>
     {{/if}}
   </nav>
-  <main>
-    <aside>
-      <h2>Enjoy the galleries!</h2>
-    </aside>
-    <div class="gallery">
+  <main class= "container">
+    
       {{{body}}}
-    </div>
-  </main>
+     </main>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
