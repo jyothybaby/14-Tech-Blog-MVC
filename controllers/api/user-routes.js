@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+router.get('/api/', function(req, res){
+  res.send("Hello from the root application URL");
+  });
+
 // CREATE new user
 router.post('/', async (req, res) => {
   try {
