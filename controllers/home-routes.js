@@ -1,3 +1,5 @@
+// This is for all home page calls like initial home page display, login and logout
+
 const router = require('express').Router();
 const { Comment, Post, User } = require('../models');
 

@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
-  {{!-- <link rel="stylesheet" type="text/css" href="/css/jass.css"> --}}
+  {{!--
+  <link rel="stylesheet" type="text/css" href="/css/jass.css"> --}}
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -15,17 +16,17 @@
   </header>
   <nav>
     <a href="/">Home</a>
-    <a href = "/dashboard">Dashboard</a>
+    <a href="/dashboard">Dashboard</a>
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
   </nav>
-  <main class= "container">
-    
-      {{{body}}}
-     </main>
+  <main class="container">
+
+    {{{body}}}
+  </main>
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
