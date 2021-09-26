@@ -1,14 +1,14 @@
 const router = require('express').Router();
-const {Comment, Post, User  } = require('../models');
-const withAuth = require('../utils/auth');
-const sequelize = require('../config/connection');
+const sequelize = require('../../config/connection');
+const { User, Comment, Post } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
     try {
       const dbPostData = await Post.findAll({
-        where: {
-          user_id :req.session.user_id
-   },
+//         where: {
+//           user_id :req.session.user_id
+//    },
    
         attributes: [
         'id',
@@ -42,8 +42,20 @@ router.get('/', withAuth, async (req, res) => {
     }
   });
 
-  router.get('/new', (req, res) => {
-    res.render('add-post');
-});
+  //Creating a new post
 
-module.exports = router;
+  router.post('/', withAuth, async (req, res) =>{
+      try {
+        const dbPostData = await Post.create({
+           title: req.body.title, 
+           content: req.body.content,
+           user_id :req.session.user_id,
+        })
+        res.status(200).json(dbPostData)
+      }catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+  })
+
+  module.exports = router;

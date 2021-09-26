@@ -3,11 +3,11 @@
 
 const router = require('express').Router();
 const userRoutes = require('./user-routes');
-//const projectRoutes = require('./projectRoutes');
+const postRoutes = require('./post-routes')
 
 //for signup and login
 router.use('/users', userRoutes);
-
+router.use('/posts', postRoutes);
 //router.use('/projects', projectRoutes);
 
 module.exports = router;
