@@ -6,6 +6,12 @@ const { Comment, Post, User } = require('../models');
 router.get('/', async (req, res) => {
     try {
       const dbPostData = await Post.findAll({
+        attributes: [
+          'id',
+          'title',
+          'content',
+          'created_at'
+        ],
         include: [
             {
               model: Post,
@@ -15,7 +21,7 @@ router.get('/', async (req, res) => {
           include: [
             {
               model: Comment,
-              attributes: ['id', 'comment_text', 'content'],
+              attributes: ['id', 'comment_text', 'content',['createdAt', 'created_at']],
             },
           ],
           include: [
@@ -30,7 +36,7 @@ router.get('/', async (req, res) => {
       const posts = dbPostData.map((post) =>
         post.get({ plain: true })
       );
-  
+  console.log("from Home Get",posts);
       res.render('homepage', {
         posts,
         loggedIn: req.session.loggedIn,

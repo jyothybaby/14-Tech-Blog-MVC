@@ -114,6 +114,7 @@ router.get('/:id',withAuth, async (req, res)=> {
       ]
     });
   const posts = dbPostData.get({ plain: true });
+  console.log("from api/post/:id", posts);
   res.render('single-post', { posts, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
