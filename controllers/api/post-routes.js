@@ -65,7 +65,7 @@ router.get('/', withAuth, async (req, res) => {
 
 router.put('/:id', withAuth, async (req, res) => {
   try {
-    const dbPostData = await Post.create({
+    const dbPostData = await Post.update({
       title: req.body.title,
       content: req.body.content 
     },
@@ -113,9 +113,8 @@ router.get('/:id',withAuth, async (req, res)=> {
 
       ]
     });
-
-  const posts = dbPostData.map((post) => post.get({ plain: true }));
-   
+  const posts = dbPostData.get({ plain: true });
+  res.render('single-post', { posts, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

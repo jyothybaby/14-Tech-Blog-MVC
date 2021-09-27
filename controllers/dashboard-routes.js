@@ -48,12 +48,12 @@ router.get('/', withAuth, async (req, res) => {
 
 
 
-// when a user clicks on a specific id, make sure hey are logged in
+// when a user clicks on a specific id, make sure they are logged in
 router.get('/edit/:id', withAuth, async (req, res) =>{
   try {
-    const dbPostData = await Post.findAll({
+    const dbPostData = await Post.findOne({
       where: {
-        user_id: req.session.user_id
+        id: req.params.id
       },
 
       attributes: [
@@ -77,7 +77,8 @@ router.get('/edit/:id', withAuth, async (req, res) =>{
 
       ]
     });
-    const posts = dbPostData.map((post) => post.get({ plain: true }));
+    const posts = dbPostData.get({ plain: true });
+    console.log(posts);
     res.render('edit-post', { posts, loggedIn: req.session.loggedIn, });
     
   } catch (err) {

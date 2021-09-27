@@ -1,4 +1,4 @@
-nav {
+/* nav {
     display:flex;
     flex-wrap:wrap;  
   }
@@ -13,4 +13,11 @@ nav {
   main {
     display: flex;
     flex-wrap: wrap;
-  }
+  } */
+
+  .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
