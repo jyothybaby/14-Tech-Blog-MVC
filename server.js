@@ -13,8 +13,11 @@ const PORT = process.env.PORT || 3001;
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
-  resave: false,
+  cookie: {
+// If the browser is idle morethan 5 minutes, the application will signout 
+    expires: 500000
+  },
+  resave: true,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize,

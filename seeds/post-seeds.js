@@ -1,24 +1,24 @@
 const { Post } = require('../models');
 
 const postData = [{
-        title: "Fear of Job Insecurity",
-        content: "I am afraid to leave my current job in pursuit of an internship.",
+        title: "About Job",
+        content: "Seeking to learn and master the art of software engineering. I did bachelors in Electronics and Communications Engineering and Masters in Embedded Systems.",
         user_id: 1
 
     },
     {
         title: "So much to learn!",
-        content: "Are we guinea pigs on a wheel? I think not! Why is it then that we are expected to learn so many new concepts in so little time?",
+        content: "Seeking to learn and master the art of software engineering. I did bachelors in Electronics and Communications Engineering and Masters in Embedded Systems",
         user_id: 2
     },
     {
-        title: "Perpetually burnt out",
-        content: "What is the point of pursuing a better life thanks to tech, when all I feel like is a cog in the machine, for years now? And I still havent landed my first job?",
+        title: "Full Stack Software Development",
+        content: "Full stack development: It refers to the development of both front end (client side) and back end (server side) portions of web application.",
         user_id: 3
     },
     {
-        title: "I miss socializing",
-        content: "I got into tech for a better life, but it takes so long just to get your first job. I just wish it got easier. I wish I could be coddled, or I wish I could be strong enough. I wish I could be loved. I wish I had balance. I wish I had a teacher on command. Oh well... Im venting. I just wish I enjoyed my situation more.",
+        title: "Full stack web Developers:",
+        content: "Full stack web developers have the ability to design complete web application and websites.",
         user_id: 4
     }
 ];

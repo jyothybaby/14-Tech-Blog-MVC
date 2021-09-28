@@ -2,7 +2,7 @@ const router = require('express').Router();
 const {Comment, Post, User  } = require('../models');
 const withAuth = require('../utils/auth');
 const sequelize = require('../config/connection');
-
+//This is for the localhost:3001/
 router.get('/', withAuth, async (req, res) => {
   try {
     const dbPostData = await Post.findAll({

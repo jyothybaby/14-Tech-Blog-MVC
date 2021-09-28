@@ -17,7 +17,7 @@ const commentData = [{
         post_id: 3
     },
     {
-        comment_text: "Don't let yourself get burnt out",
+        comment_text: "I like Testing",
         user_id: 4,
         post_id: 4
     }
