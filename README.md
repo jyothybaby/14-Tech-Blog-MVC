@@ -24,7 +24,7 @@
 1. GitHub repository URL: https://github.com/jyothybaby/14-Tech-Blog-MVC
 
 Screenshots:
-![screen-1]()<br>
+![screen-1](https://github.com/jyothybaby/14-Tech-Blog-MVC/blob/main/screenshots/screen1.png)<br>
     
 
 
