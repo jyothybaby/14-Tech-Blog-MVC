@@ -27,6 +27,7 @@ Screenshots:
 ![screen-1](https://github.com/jyothybaby/14-Tech-Blog-MVC/blob/main/screenshots/screen1.png)<br>
     
 
+https://blooming-tundra-10282.herokuapp.com/ | https://git.heroku.com/blooming-tundra-10282.git
 
 
 
