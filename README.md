@@ -22,12 +22,13 @@
 
 <b>Links for the project:</b><br>
 1. GitHub repository URL: https://github.com/jyothybaby/14-Tech-Blog-MVC
+2. Heroku App: https://blooming-tundra-10282.herokuapp.com/
 
 Screenshots:
 ![screen-1](https://github.com/jyothybaby/14-Tech-Blog-MVC/blob/main/screenshots/screen1.png)<br>
     
 
-https://blooming-tundra-10282.herokuapp.com/ | https://git.heroku.com/blooming-tundra-10282.git
+
 
 
 
